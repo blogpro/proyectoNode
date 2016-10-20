@@ -1,7 +1,26 @@
 {
-  "name": "Ejemplo",
-  "version": "0.0.1",
+  "name": "proyectoNode",
+  "version": "1.0.0",
+  "description": "Proyecto Node para unir con el proyecto de Django.",
+  "main": "server.js",
   "dependencies": {
+    "socket.io": "^1.5.0",
     "express": "^3.3.5"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blogpro/proyectoNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blogpro/proyectoNode/issues"
+  },
+  "homepage": "https://github.com/blogpro/proyectoNode#readme"
 }
