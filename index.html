@@ -2,9 +2,9 @@
 <head>
 	<title>Server None</title>
 
-	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://servernodetystab.herokuapp.com/socket.io/socket.io.js"></script>
 	<script>
-	  var socket = io.connect('https://servernodetystab.herokuapp.com');//Puente de conexion a el server
+	  var socket = io.connect('https://servernodetystab.herokuapp.com/');//Puente de conexion a el server
 	  
 	  socket.on('messagesFront', function (data) {//Se recibe el mensaje a el server.
 	    console.log(data);
