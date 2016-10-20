@@ -2,10 +2,17 @@
 <head>
 	<title>Server None</title>
 
+	<!-- <script src="/socket.io/socket.io.js"></script> -->
 	<script src="https://servernodetystab.herokuapp.com/socket.io/socket.io.js"></script>
 	<script>
-	  var socket = io.connect('https://servernodetystab.herokuapp.com/');//Puente de conexion a el server
+
+		var URLactual = window.location;
+		var UrlAbsoluta = URLactual.href;
+
+	  	var socket = io.connect(UrlAbsoluta);//Puente de conexion a el server
 	  
+	  
+
 	  socket.on('messagesFront', function (data) {//Se recibe el mensaje a el server.
 	    console.log(data);
 	    socket.emit('NewConection', "Nueva Conexion");//Se envia el mensaje a el server de nueva conexion.
@@ -14,7 +21,7 @@
 
 </head>
 <body>
-	<h1>Server Node corriendo......</h1>
+	<h1>Server corriendo......</h1>
 </body>
 </html>
 
