@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require("method-override");
 var app = express();
+const server = require('http').createServer(app);  
 
 // Middlewares
 app.use(bodyParser.urlencoded({ extended: false }));  
@@ -25,6 +26,8 @@ api.route('/operaciones/teorema-pitagoras').post(CtrlTeoremaPitagoras.calcular);
 app.use('/api', api);
 
 // Start server
-app.listen(9000, function() {
+/*app.listen(9000, function() {
   console.log("Node server running on http://localhost:9000");
-});
+});*/
+
+server.listen(process.env.PORT || 9000);
