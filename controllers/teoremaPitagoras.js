@@ -2,9 +2,7 @@ var operacion = require('./../lib/teoremaPitagoras');
 
 //POST - Calcula la operacion
 exports.calcular = function(req, res) {
-    console.log(req.body);
     var respuesta;
-
     var calPitagoras = new operacion.TeoremaPitagoras(req.body);
     var resultado = calPitagoras.tipoCalculo();
 
@@ -22,6 +20,5 @@ exports.calcular = function(req, res) {
             mensajes : "Calculo correcto"
         };
     }
-
     res.status(200).jsonp(respuesta);
 };
