@@ -9,7 +9,10 @@ exports.calcular = function(req, res) {
     if(isNaN(resultado)){
         respuesta = {
             codeE : 1,
-            jsonRespuesta :resultado,
+            jsonRespuesta : {
+                resultado: resultado.resultado,
+                descripcion : resultado.historial
+            },
             mensajes : "No tiene solucion. Los valores de los catetos debe ser menor o igual a la hipotenusa"
         };
 
