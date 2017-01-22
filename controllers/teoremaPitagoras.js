@@ -1,27 +1,40 @@
 var operacion = require('./../lib/teoremaPitagoras');
 
 //POST - Calcula la operacion
-exports.calcular = function(req, res) {
+exports.calcular = function (req, res) {
+    console.log(req.body.tipoCalculo);
     var respuesta;
-    var calPitagoras = new operacion.TeoremaPitagoras(req.body);
-    var resultado = calPitagoras.tipoCalculo();
+    if (req.body.tipo != undefined && req.body.catetoA != undefined && req.body.catetoB != undefined && req.body.hipotenusa != undefined) {
+        var calPitagoras = new operacion.TeoremaPitagoras(req.body);
+        var respuesta = calPitagoras.tipoCalculo();
 
-    if(isNaN(resultado)){
-        respuesta = {
-            codeE : 1,
-            jsonRespuesta : {
-                resultado: resultado.resultado,
-                descripcion : resultado.historial
-            },
-            mensajes : "No tiene solucion. Los valores de los catetos debe ser menor o igual a la hipotenusa"
-        };
+        if (isNaN(respuesta.resultado)) {
+            respuesta = {
+                code: 1,
+                jsonRespuesta: {
+                    resultado: NaN,
+                    descripcion: respuesta.historial
+                },
+                mensaje: respuesta.mensaje
+            };
 
-    }else{
+        } else {
+            respuesta = {
+                code: 0,
+                jsonRespuesta: {
+                    resultado: respuesta.resultado,
+                    descripcion: respuesta.historial
+                },
+                mensaje: respuesta.mensaje
+            };
+        }
+        res.status(200).jsonp(respuesta);
+    } else {
         respuesta = {
-            codeE : 0,
-            jsonRespuesta : resultado,
-            mensajes : "Calculo correcto"
+            code: 1,
+            jsonRespuesta: {},
+            mensajes: "Error, Parametros Invalidos"
         };
+        res.status(200).jsonp(respuesta);
     }
-    res.status(200).jsonp(respuesta);
 };
