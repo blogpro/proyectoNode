@@ -1,7 +1,89 @@
-body{
-	font-family: "Ubuntu-L", Helvetica, sans-serif;
-	font-size: 16px;
-	background-color: #F2F7FF;
+html, body {
+    background-color: #F2F7FF;
+    font-family: "Ubuntu-L", Helvetica, sans-serif;
+    font-size: 16px;
+    height: 100%;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+article {
+    padding: 10px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.contenido article.contenido__titulo {
+    height: 236px;
+    padding: 0 !important;
+}
+
+.contenido article.contenido__titulo figure {
+    position: relative;
+    z-index: 1;
+    height: 236px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contenido article.contenido__titulo figure .imgHeader {
+    height: 236px;
+    background-image: url('../img/imagen-header.png');
+}
+
+.contenido article.contenido__titulo div {
+    align-items: center;
+    background-color: rgba(255, 206, 99, 0.7);
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    position: relative;
+    top: -50px;
+    width: 100%;
+    z-index: 2;
+}
+
+.contenido aside.contenido__comunidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 25px 0px;
+}
+
+.contenido aside.contenido__comunidad article figure {
+    border-radius: 50%;
+    background-color: rgba(11, 64, 156, 0.8);
+    height: 150px;
+    margin: auto;
+    width: 128px;
+}
+
+.contenido aside.contenido__proyectos {
+    height: 30%;
+}
+
+.contenido footer.contenido__footer {
+    height: 10%;
 }
 
 /* Colores
@@ -13,5 +95,13 @@ azul 1 0B409C
 azul 2 10316B
 amarillo FFCE63
  */
+
+@media only screen and (min-width: 1600px) {
+    .contenido article.contenido__titulo figure .imgHeader {
+        background-image: url('../img/imagen-header-full.jpg');
+        background-position-x: -200px;
+        background-position-y: -200px;
+    }
+}
 
 
