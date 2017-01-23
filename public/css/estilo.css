@@ -12,12 +12,13 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+	font-family: "Ubuntu-M","Ubuntu-R";
+    font-size: 24px;
     padding: 10px 0px;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h1, h2 {
