@@ -6,7 +6,9 @@ html, body {
 }
 
 h1 {
-    font-size: 26px;
+	font-family: "Ubuntu-M";
+    font-size: 30px;
+    text-shadow: 0px 1px #F2F7FF;
 }
 
 h2 {
@@ -25,44 +27,44 @@ h1, h2 {
 article {
     padding: 10px;
 }
+header.contenido__header {
+    height: 236px;
+    padding: 0 !important;
+    position: relative;
+}
+
+header.contenido__header figure {
+    position: absolute;
+    z-index: 1;
+    height: 236px;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+header.contenido__header figure .imgHeader {
+    height: 236px;
+    background-image: url('../img/imagen-header.png');
+}
+
+header.contenido__header div {
+align-items: center;
+    background-color: rgba(255, 206, 99, 0.8);
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+}
 
 .contenido {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 80%;
+    width: 75%;
 }
-
-.contenido article.contenido__titulo {
-    height: 236px;
-    padding: 0 !important;
-}
-
-.contenido article.contenido__titulo figure {
-    position: relative;
-    z-index: 1;
-    height: 236px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.contenido article.contenido__titulo figure .imgHeader {
-    height: 236px;
-    background-image: url('../img/imagen-header.png');
-}
-
-.contenido article.contenido__titulo div {
-    align-items: center;
-    background-color: rgba(255, 206, 99, 0.7);
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    position: relative;
-    top: -50px;
-    width: 100%;
-    z-index: 2;
-}
-
 .contenido aside.contenido__comunidad {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +99,7 @@ amarillo FFCE63
  */
 
 @media only screen and (min-width: 1600px) {
-    .contenido article.contenido__titulo figure .imgHeader {
+    header.contenido__header figure .imgHeader {
         background-image: url('../img/imagen-header-full.jpg');
         background-position-x: -200px;
         background-position-y: -200px;
