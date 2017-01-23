@@ -2,11 +2,13 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require("method-override");
 var app = express();
-const server = require('http').createServer(app);  
+const server = require('http').createServer(app);
+var path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: false }));  
 app.use(bodyParser.json());  
 app.use(methodOverride());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Importamos Controladores
 var CtrlTeoremaPitagoras = require('./controllers/teoremaPitagoras');
