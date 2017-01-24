@@ -55,7 +55,10 @@ header.contenido__header figure {
 
 header.contenido__header figure .imgHeader {
     height: 236px;
-    background-image: url('../img/imagen-header.png');
+    /*background-image: url('../img/imagen-header.png');*/
+    background-image: url('../img/imagen-header-full.jpg');
+    background-size: 145%;
+    background-position-y: -200px;
 }
 
 header.contenido__header div {
@@ -82,6 +85,12 @@ align-items: center;
     background: rgba(11, 64, 156, 0.1);
     border: solid 1px rgba(11, 64, 156, 0.5);
     padding: 1em;
+}
+
+.contenido aside.contenido__comunidad::after{
+	height: 10px;
+	width: 100%;
+	background-color: red;
 }
 .contenido aside.contenido__comunidad h2{
   
@@ -132,11 +141,12 @@ amarillo FFCE63
  */
 
 @media only screen and (min-width: 1600px) {
-    header.contenido__header figure .imgHeader {
+    /*header.contenido__header figure .imgHeader {
         background-image: url('../img/imagen-header-full.jpg');
         background-position-x: -200px;
         background-position-y: -200px;
-    }
+        background-size: 190%;
+    }*/
 }
 
 
