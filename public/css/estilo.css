@@ -1,5 +1,5 @@
 html, body {
-    background-color: #F2F7FF;
+    /*background-color: #F2F7FF;*/
     font-family: "Ubuntu-L", Helvetica, sans-serif;
     font-size: 16px;
     height: 100%;
@@ -110,11 +110,11 @@ header.contenido__header div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .contenido aside.contenido__proyectos section.proyectos__activos article {
-    width: calc(33% - 2em);
+    width: 32%;
     transition: transform 0.5s ease, opacity 0.5s ease;
     position: relative;
 }
@@ -260,7 +260,20 @@ header.contenido__header div {
 }
 
 .contenido footer.contenido__footer {
-    height: 10%;
+    height: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #10316B;
+    z-index: 100;
+    padding: 15px 0px;
+}
+.contenido footer.contenido__footer small{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    display: block;
 }
 
 /* Colores
