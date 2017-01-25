@@ -344,7 +344,7 @@ amarillo FFCE63
     }
     header.contenido__header figure .imgHeader {
         background-image: url('../img/imagen-header-full.jpg');
-        background-size: 150%;
+        /*background-size: 150%;*/
 
     }
 
