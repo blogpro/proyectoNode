@@ -1,5 +1,4 @@
 html, body {
-    /*background-color: #F2F7FF;*/
     font-family: "Ubuntu-L", Helvetica, sans-serif;
     font-size: 16px;
     height: 100%;
@@ -60,7 +59,7 @@ header.contenido__header figure {
 header.contenido__header figure .imgHeader {
     height: 236px;
     background-image: url('../img/imagen-header.png');
-    /*background-image: url('../img/imagen-header-full.jpg');*/
+
 }
 
 header.contenido__header div {
@@ -113,6 +112,26 @@ header.contenido__header div {
     margin-top: 20px;
 }
 
+.contenido aside.contenido__proyectos header{
+    position: relative;
+    text-align: center;
+/* border-top: solid 1px #CCC; */
+    top: 1em;
+    border-top: solid 1px rgba(11, 64, 156, 0.5);
+    margin-bottom: 10px;
+
+}
+.contenido aside.contenido__proyectos header h2{
+    top: -0.65em;
+    display: inline;
+    position: relative;
+    /* top: -0.65em; */
+    /* display: inline; */
+    /* margin: 0; */
+    padding: 0 1em 0 1em;
+    background-color: #FFF;
+}
+
 .contenido aside.contenido__proyectos section.proyectos__activos article {
     width: 32%;
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -158,10 +177,6 @@ header.contenido__header div {
     left: 0;
     width: 100%;
     height: 100%;
-    /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;*/
     opacity: 0.25;
     z-index: 2;
 }
