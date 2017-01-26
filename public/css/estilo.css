@@ -141,10 +141,10 @@ header.contenido__header div {
 }
 
 .carrusel li {
-    width: 220px;
-    height: 220px;
+    width: 360px;
+    height: 250px;
     display: inline-block;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .carrusel-item {
@@ -181,21 +181,25 @@ header.contenido__header div {
     transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
     background: rgba(11, 64, 156, 1);
     opacity: 0;
+    box-shadow: inset 0 0 0 10px rgba(255, 206, 99, 1), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carrusel-img-1 {
     background-image: url(../img/pic_02.jpg);
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 15px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carrusel-img-2 {
     background-image: url(../img/pic_01.jpg);
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 15px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carrusel-img-3 {
     background-image: url(../img/pic03.jpg);
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 15px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carrusel-info h3 {
@@ -310,6 +314,7 @@ amarillo FFCE63
     .contenido aside.contenido__proyectos section.proyectos__activos article {
         width: 45%;
     }
+
 }
 
 /* Tablets en horizonal y escritorios normales
